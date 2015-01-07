@@ -1,5 +1,9 @@
 SET(SRC_FILES simobject.cpp)
-SET(HEADERS_FILES simobject.h base.h)
+SET(HEADERS_FILES 
+      ${CMAKE_BINARY_DIR}/lib/base.h
+      simobject.h
+      dem.h
+)
 
 #======================================================
 IF (USERPATH)
@@ -10,6 +14,7 @@ IF (USERPATH)
 ENDIF (USERPATH)
 #======================================================
 
+CONFIGURE_FILE(base.h.in "base.h")
 #===========================================================
 ADD_LIBRARY(dem SHARED ${SRC_FILES})
 TARGET_LINK_LIBRARIES(dem ${Boost_LIBRARIES})
@@ -21,3 +26,5 @@ SET_TARGET_PROPERTIES(dem PROPERTIES
 INSTALL(TARGETS dem DESTINATION "${CMAKE_INSTALL_LIBDIR}/")
 INSTALL(FILES ${HEADERS_FILES} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/libdem/")
 #===========================================================
+
+INCLUDE_DIRECTORIES("${CMAKE_BINARY_DIR}/lib/")
