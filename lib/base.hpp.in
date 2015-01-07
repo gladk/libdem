@@ -23,6 +23,13 @@
 #include <Eigen/Dense>
 #include <Eigen/Geometry>
 
+#include <boost/smart_ptr/shared_ptr.hpp>
+
+#include <deque>
+
 using real=${REALNUMBER};
 using v3=Eigen::Matrix<${REALNUMBER}, 3, 1>;
 using quat=Eigen::Quaternion<${REALNUMBER}>;
+
+using boost::shared_ptr;
+using boost::weak_ptr;

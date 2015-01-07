@@ -27,7 +27,8 @@ class state {
     v3 _pos;
     quat _ori = quat::Identity();
   public:
+    state() {};
     state(v3 pos) : _pos(pos) {};
-    const v3 pos() const { return _pos };
-    const quat ori() const { return _ori };
+    const v3 pos() const { return _pos; };
+    const quat ori() const { return _ori; };
 };

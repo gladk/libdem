@@ -1,4 +1,5 @@
-SET(SRC_FILES simobject.cpp
+SET(SRC_FILES 
+      simobject.cpp
       scene.cpp
 )
 SET(HEADERS_FILES 

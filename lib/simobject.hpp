@@ -24,7 +24,8 @@
 
 class simobject {
   private:
-
+    shared_ptr<material> _mat;
+    std::deque<node> _nodes;
   public:
-    simobject();
+    simobject() {};
 };

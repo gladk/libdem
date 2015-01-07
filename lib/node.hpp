@@ -21,10 +21,14 @@
 
 #pragma once
 #include "shape.hpp"
+#include "state.hpp"
+#include "material.hpp"
 
 class node {
   private:
     shape _shape;
+    state _state;
+    shared_ptr<material> _mat;
   public:
-    node(shape shape) : _shape(shape) {};
+    node(shape shapeT, shared_ptr<material> matT, state stateT) : _shape(shapeT), _mat(matT), _state(stateT) {};
 };

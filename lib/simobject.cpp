@@ -21,6 +21,3 @@
 
 #include "simobject.hpp"
 
-simobject::simobject() {
-  
-}
