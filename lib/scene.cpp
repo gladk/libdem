@@ -19,7 +19,7 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "scene.h"
+#include "scene.hpp"
 
 scene::scene() {
   

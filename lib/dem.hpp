@@ -20,12 +20,4 @@
 */
 
 #pragma once
-#include "base.h"
-#include "simobject.h"
-
-class scene {
-  private:
-
-  public:
-    scene();
-};
+#include "simobject.hpp"

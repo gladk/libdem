@@ -19,8 +19,12 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "node.h"
+#pragma once
+#include "base.hpp"
 
-node::node() {
-  
-}
+class material {
+  private:
+    
+  public:
+    material() {};
+};

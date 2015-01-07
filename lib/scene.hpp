@@ -20,11 +20,11 @@
 */
 
 #pragma once
-#include "base.h"
+#include "simobject.hpp"
 
-class shape {
+class scene {
   private:
 
   public:
-    shape();
+    scene();
 };

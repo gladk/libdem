@@ -20,6 +20,11 @@
 */
 
 #pragma once
-#include <Eigen/Dense>
+#include "node.hpp"
 
-using real=${REALNUMBER};
+class simobject {
+  private:
+
+  public:
+    simobject();
+};

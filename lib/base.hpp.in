@@ -20,4 +20,9 @@
 */
 
 #pragma once
-#include "simobject.h"
+#include <Eigen/Dense>
+#include <Eigen/Geometry>
+
+using real=${REALNUMBER};
+using v3=Eigen::Matrix<${REALNUMBER}, 3, 1>;
+using quat=Eigen::Quaternion<${REALNUMBER}>;

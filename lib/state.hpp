@@ -19,8 +19,15 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "shape.h"
+#pragma once
+#include "base.hpp"
 
-shape::shape() {
-  
-}
+class state {
+  private:
+    v3 _pos;
+    quat _ori = quat::Identity();
+  public:
+    state(v3 pos) : _pos(pos) {};
+    const v3 pos() const { return _pos };
+    const quat ori() const { return _ori };
+};

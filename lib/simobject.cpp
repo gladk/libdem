@@ -19,7 +19,7 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "simobject.h"
+#include "simobject.hpp"
 
 simobject::simobject() {
   

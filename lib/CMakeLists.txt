@@ -1,16 +1,15 @@
 SET(SRC_FILES simobject.cpp
-      scene.cpp 
-      node.cpp
-      shape.cpp
+      scene.cpp
 )
 SET(HEADERS_FILES 
-      ${CMAKE_BINARY_DIR}/lib/base.h
-      simobject.h
-      scene.h
-      node.h
-      shape.h
-      state.h
-      dem.h
+      ${CMAKE_BINARY_DIR}/lib/base.hpp
+      simobject.hpp
+      scene.hpp
+      node.hpp
+      shape.hpp
+      state.hpp
+      material.hpp
+      dem.hpp
 )
 
 #======================================================
@@ -22,8 +21,8 @@ IF (USERPATH)
 ENDIF (USERPATH)
 #======================================================
 
+CONFIGURE_FILE(base.hpp.in "base.hpp")
 
-CONFIGURE_FILE(base.h.in "base.h")
 #===========================================================
 ADD_LIBRARY(dem SHARED ${SRC_FILES})
 TARGET_LINK_LIBRARIES(dem ${Boost_LIBRARIES})

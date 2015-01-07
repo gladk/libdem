@@ -20,11 +20,17 @@
 */
 
 #pragma once
-#include "shape.h"
+#include "base.hpp"
 
-class node {
-  private:
-
+class shape {
   public:
-    node();
+    shape() {};
 };
+
+class sphere : public shape {
+  private:
+    v3 _rad;
+  public:
+    sphere(v3 rad) : _rad(rad) {};
+};
+

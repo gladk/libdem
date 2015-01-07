@@ -20,11 +20,11 @@
 */
 
 #pragma once
-#include "base.h"
+#include "shape.hpp"
 
-class simobject {
+class node {
   private:
-
+    shape _shape;
   public:
-    simobject();
+    node(shape shape) : _shape(shape) {};
 };
