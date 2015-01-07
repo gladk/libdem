@@ -29,8 +29,9 @@ class shape {
 
 class sphere : public shape {
   private:
-    v3 _rad;
+    real _rad;
   public:
-    sphere(v3 rad) : _rad(rad) {};
+    sphere(real rad) : _rad(rad) {}
+    real const rad() const {return _rad;} 
 };
 

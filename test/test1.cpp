@@ -19,17 +19,25 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#pragma once
-#include "shape.hpp"
-#include "state.hpp"
-#include "material.hpp"
+#include "dem.hpp"
+#include "gtest/gtest.h"
 
-class node {
-  private:
-    shape _shape;
-    state _state;
-    shared_ptr<material> _mat;
-  public:
-    node(shape shapeT, state stateT, shared_ptr<material> matT) : 
-      _shape(shapeT), _state(stateT), _mat(matT){};
-};
+int Factorial(int n);
+
+TEST(FactorialTest, Negative) {
+  EXPECT_EQ(1, Factorial(-5));
+}
+
+int Factorial(int n) {
+  int result = 1;
+  for (int i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+  
+int main(int argc, char* argv[]) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
+
