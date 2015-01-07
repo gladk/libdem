@@ -1,7 +1,15 @@
-SET(SRC_FILES simobject.cpp)
+SET(SRC_FILES simobject.cpp
+      scene.cpp 
+      node.cpp
+      shape.cpp
+)
 SET(HEADERS_FILES 
       ${CMAKE_BINARY_DIR}/lib/base.h
       simobject.h
+      scene.h
+      node.h
+      shape.h
+      state.h
       dem.h
 )
 
@@ -13,6 +21,7 @@ IF (USERPATH)
   SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 ENDIF (USERPATH)
 #======================================================
+
 
 CONFIGURE_FILE(base.h.in "base.h")
 #===========================================================

@@ -6,6 +6,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 SET(VERSION 0.0.1)
 SET(SOVERSION 0)
 SET(USERPATH 1)
+SET(REALNUMBER double)
 
 INCLUDE(GNUInstallDirs)
 #===========================================================

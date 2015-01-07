@@ -19,7 +19,8 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#pragma once
-#include <Eigen/Dense>
+#include "scene.h"
 
-using real=${REALNUMBER};
+scene::scene() {
+  
+}

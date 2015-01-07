@@ -20,6 +20,11 @@
 */
 
 #pragma once
-#include <Eigen/Dense>
+#include "shape.h"
 
-using real=${REALNUMBER};
+class node {
+  private:
+
+  public:
+    node();
+};

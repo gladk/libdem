@@ -19,7 +19,8 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#pragma once
-#include <Eigen/Dense>
+#include "shape.h"
 
-using real=${REALNUMBER};
+shape::shape() {
+  
+}

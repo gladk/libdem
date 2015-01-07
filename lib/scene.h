@@ -20,6 +20,12 @@
 */
 
 #pragma once
-#include <Eigen/Dense>
+#include "base.h"
+#include "simobject.h"
 
-using real=${REALNUMBER};
+class scene {
+  private:
+
+  public:
+    scene();
+};

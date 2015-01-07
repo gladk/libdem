@@ -20,5 +20,4 @@
 */
 
 #pragma once
-#include "base.h"
 #include "simobject.h"
