@@ -19,13 +19,25 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "body.hpp"
+#pragma once
+#include "node.hpp"
 
-
-particle::particle (real rad, v3 pos, shared_ptr<material> mat) {
-  
-  auto sphereTMP = std::make_shared<sphere>(rad);
-  auto stateTMP  = std::make_shared<state>();
-  
-  //auto nodeTMP   = std::make_shared<node>(sphereTMP, stateTMP, mat);
-}
+class contact {
+  private:
+    shared_ptr<node> _node_i;
+    shared_ptr<node> _node_j;
+    shared_ptr<material> _mat;
+    
+    real _kn = 0.;
+    real _kt = 0.;
+    real _cn = 0.;
+    real _ct = 0.;
+  public:
+    contact(shared_ptr<node> node_i, shared_ptr<node>, node_j) : 
+      _node_i(node_i), _node_j(node_j){};
+    
+    const real kn() const {return _kn;}
+    const real kt() const {return _kt;}
+    const real cn() const {return _cn;}
+    const real ct() const {return _ct;}
+};

@@ -11,6 +11,7 @@ SET(HEADERS_FILES
       state.hpp
       material.hpp
       dem.hpp
+      contact.hpp
 )
 
 CONFIGURE_FILE(base.hpp.in "base.hpp")

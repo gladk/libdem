@@ -22,10 +22,14 @@
 #pragma once
 #include "node.hpp"
 
-class simobject {
+class body {
   private:
-    shared_ptr<material> _mat;
     std::deque<node> _nodes;
   public:
-    simobject() {};
+    body() {};
+};
+
+class particle : public body {
+  public:
+    particle(real rad, v3 pos, shared_ptr<material> mat);
 };

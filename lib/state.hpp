@@ -24,7 +24,7 @@
 
 class state {
   private:
-    v3 _pos;
+    v3 _pos = v3::Zero();
     quat _ori = quat::Identity();
   public:
     state() {};
