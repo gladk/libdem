@@ -1,10 +1,10 @@
 SET(SRC_FILES 
-      simobject.cpp
+      body.cpp
       scene.cpp
 )
 SET(HEADERS_FILES 
       ${CMAKE_BINARY_DIR}/lib/base.hpp
-      simobject.hpp
+      body.hpp
       scene.hpp
       node.hpp
       shape.hpp

@@ -20,4 +20,4 @@
 */
 
 #pragma once
-#include "simobject.hpp"
+#include "body.hpp"

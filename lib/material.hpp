@@ -24,7 +24,10 @@
 
 class material {
   private:
-    
+    real _rho = 0.;
+    real _frict = 0.;
   public:
     material() {};
+    const real rho() const {return _rho;}
+    const real frict() const {return _frict;}
 };

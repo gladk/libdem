@@ -19,5 +19,5 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "simobject.hpp"
+#include "body.hpp"
 

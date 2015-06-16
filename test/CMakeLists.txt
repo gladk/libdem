@@ -1,6 +1,7 @@
 INCLUDE_DIRECTORIES("${CMAKE_BINARY_DIR}/lib/")
 INCLUDE_DIRECTORIES("/usr/src/gtest")
 
+
 #======================================================
 IF (USERPATH)
   SET(CMAKE_SKIP_BUILD_RPATH FALSE)

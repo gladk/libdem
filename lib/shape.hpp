@@ -23,8 +23,11 @@
 #include "base.hpp"
 
 class shape {
+  private:
+    v3 _color=v3::Zero();
   public:
     shape() {};
+    const v3 color() const {return _color;}
 };
 
 class sphere : public shape {
