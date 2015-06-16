@@ -12,4 +12,4 @@ ENDIF (USERPATH)
 #======================================================
 
 ADD_EXECUTABLE(test1 test1.cpp /usr/src/gtest/src/gtest-all.cc)
-TARGET_LINK_LIBRARIES(test1 ${Boost_LIBRARIES})
+TARGET_LINK_LIBRARIES(test1 ${Boost_LIBRARIES} dem)

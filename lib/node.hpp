@@ -26,10 +26,10 @@
 
 class node {
   private:
-    shape _shape;
-    state _state;
+    shared_ptr<shape> _shape;
+    shared_ptr<state> _state;
     shared_ptr<material> _mat;
   public:
-    node(shape shapeT, state stateT, shared_ptr<material> matT) : 
+    node(shared_ptr<shape> shapeT, shared_ptr<state> stateT, shared_ptr<material> matT) : 
       _shape(shapeT), _state(stateT), _mat(matT){};
 };

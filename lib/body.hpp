@@ -23,8 +23,9 @@
 #include "node.hpp"
 
 class body {
+  friend class particle;
   private:
-    std::deque<node> _nodes;
+    std::deque<shared_ptr<node>> _nodes;
   public:
     body() {};
 };

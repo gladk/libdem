@@ -38,6 +38,10 @@ int Factorial(int n) {
   
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
+  
+  auto m = make_shared<material>();
+  particle a = particle(0.05, v3(0,1,0),m);
+  
   return RUN_ALL_TESTS();
 }
 

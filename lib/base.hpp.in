@@ -24,6 +24,7 @@
 #include <Eigen/Geometry>
 
 #include <boost/smart_ptr/shared_ptr.hpp>
+#include <boost/smart_ptr/make_shared.hpp>
 
 #include <deque>
 
@@ -33,3 +34,4 @@ using quat=Eigen::Quaternion<${REALNUMBER}>;
 
 using boost::shared_ptr;
 using boost::weak_ptr;
+using boost::make_shared;
