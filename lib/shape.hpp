@@ -24,17 +24,13 @@
 
 class shape {
   private:
-    v3 _color=v3::Zero();
+    shapeType ShType = shapeType::SPHERE;
+    v3 _color = v3::Zero();
+    real _rad = 0.;
   public:
     shape() {};
-    const v3 color() const {return _color;}
+    shape(const real& rad);
+    shape(const real& rad, v3 color);
+    const v3 color() const;
+    const real rad() const;
 };
-
-class sphere : public shape {
-  private:
-    real _rad;
-  public:
-    sphere(real rad) : _rad(rad) {}
-    real const rad() const {return _rad;} 
-};
-

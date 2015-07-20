@@ -19,22 +19,24 @@
     along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "dem.hpp"
-#include "gtest/gtest.h"
+#include "shape.hpp"
 
-TEST(BasicParticleCreation, Trivial) {
-  const auto mat1 = make_shared<material>(1000, 0.5);
-  EXPECT_EQ(1000, mat1->rho());
-  EXPECT_EQ(0.5, mat1->frict());
-  
-  const auto p1 = sphere(0.005, v3(0,  0,0),mat1);
-  const auto p2 = sphere(0.007, v3(0.1,0,0),mat1);
-  EXPECT_EQ(1, p1.nodes());
-  EXPECT_EQ(0.007, p2.rad());
+
+shape::shape (const real& rad) {
+  _rad=rad;
+  ShType = shapeType::SPHERE;
 }
 
-int main(int argc, char* argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+shape::shape(const real& rad, v3 color) {
+  _rad=rad;
+  ShType = shapeType::SPHERE;
+  _color=color;
 }
 
+const v3 shape::color() const {
+  return _color;
+}
+
+const real shape::rad() const {
+  return _rad;
+}

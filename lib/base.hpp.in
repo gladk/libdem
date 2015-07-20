@@ -35,3 +35,5 @@ using quat=Eigen::Quaternion<${REALNUMBER}>;
 using boost::shared_ptr;
 using boost::weak_ptr;
 using boost::make_shared;
+
+enum class shapeType {SPHERE};

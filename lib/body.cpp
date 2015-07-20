@@ -21,6 +21,11 @@
 
 #include "body.hpp"
 
-particle::particle (real rad, v3 pos, shared_ptr<material> mat) {
-  _nodes.push_back(make_shared<node>(sphere(rad), state(), mat));
+sphere::sphere (real rad, v3 pos, shared_ptr<material> mat) {
+  _nodes.push_back(make_shared<node>(shape(rad), state(pos), mat));
 }
+
+const real sphere::rad() const {
+  return _nodes[0]->_shape.rad();
+}
+

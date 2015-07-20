@@ -23,7 +23,7 @@
 #include "node.hpp"
 
 class body {
-  friend class particle;
+  friend class sphere;
   private:
     std::deque<shared_ptr<node>> _nodes;
   public:
@@ -31,7 +31,8 @@ class body {
     const std::size_t nodes() const {return _nodes.size();}
 };
 
-class particle : public body {
+class sphere : public body {
   public:
-    particle(real rad, v3 pos, shared_ptr<material> mat);
+    sphere(real rad, v3 pos, shared_ptr<material> mat);
+    const real rad() const;
 };

@@ -25,11 +25,11 @@
 #include "material.hpp"
 
 class node {
-  private:
+  public:
     shape _shape;
     state _state;
     shared_ptr<material> _mat;
-  public:
+
     node(shape shapeT, state stateT, shared_ptr<material> matT) :
       _shape(shapeT), _state(stateT), _mat(matT){};
 };
