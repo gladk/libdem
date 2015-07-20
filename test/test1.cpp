@@ -22,26 +22,17 @@
 #include "dem.hpp"
 #include "gtest/gtest.h"
 
-int Factorial(int n);
-
-TEST(FactorialTest, Negative) {
-  EXPECT_EQ(1, Factorial(-5));
-}
-
-int Factorial(int n) {
-  int result = 1;
-  for (int i = 1; i <= n; i++) {
-    result *= i;
-  }
-  return result;
-}
+TEST(BasicParticleCreation, Trivial) {
+  const auto mat1 = make_shared<material>(1000, 0.5);
+  EXPECT_EQ(1000, mat1->rho());
+  EXPECT_EQ(0.5, mat1->frict());
   
+  const auto p1 = particle(0.05, v3(0,1,0),mat1);
+  EXPECT_EQ(1, p1.nodes());
+}
+
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
-  
-  auto m = make_shared<material>();
-  particle a = particle(0.05, v3(0,1,0),m);
-  
   return RUN_ALL_TESTS();
 }
 

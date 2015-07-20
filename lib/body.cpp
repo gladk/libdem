@@ -22,6 +22,5 @@
 #include "body.hpp"
 
 particle::particle (real rad, v3 pos, shared_ptr<material> mat) {
-  const auto nodeTMP   = make_shared<node>(sphere(rad), state(), mat);
-  _nodes.push_back(nodeTMP);
+  _nodes.push_back(make_shared<node>(sphere(rad), state(), mat));
 }

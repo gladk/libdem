@@ -28,6 +28,7 @@ class body {
     std::deque<shared_ptr<node>> _nodes;
   public:
     body() {};
+    const std::size_t nodes() const {return _nodes.size();}
 };
 
 class particle : public body {
