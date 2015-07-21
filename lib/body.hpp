@@ -28,7 +28,7 @@ class body {
     std::deque<shared_ptr<node>> _nodes;
     shapeType ShType = shapeType::SPHERE;
     v3 _color = v3::Zero();
-    real _rad = 0.;
+    real _rad = -1.;
   public:
     body() {};
     const std::size_t nodes() const {return _nodes.size();}

@@ -24,3 +24,7 @@
 scene::scene() {
 
 }
+
+void scene::addBody(shared_ptr<body> b) {
+  _bodies.push_back(b);
+}

@@ -20,11 +20,13 @@
 */
 
 #pragma once
+
 #include "body.hpp"
 
 class scene {
   private:
-
+    std::deque<shared_ptr<body>> _bodies;
   public:
     scene();
+    void addBody(shared_ptr<body> p);
 };

@@ -27,13 +27,17 @@ TEST(BasicParticleCreation, Trivial) {
   EXPECT_EQ(1000, mat1->rho());
   EXPECT_EQ(0.5, mat1->frict());
   
-  const auto p1 = sphere(0.005, v3(0,  0,0),mat1);
-  EXPECT_EQ(0.005, p1.rad());
+  auto p1 = make_shared<sphere>(sphere(0.005, v3(0,  0,0),mat1));
+  EXPECT_EQ(0.005, p1->rad());
   
-  const auto p2 = sphere(0.007, v3(0.1,0,0),mat1);
-  EXPECT_EQ(0.007, p2.rad());
+  auto p2 = make_shared<sphere>(sphere(0.007, v3(0.1,0,0),mat1));
+  EXPECT_EQ(0.007, p2->rad());
   
-  EXPECT_EQ(1, p1.nodes());
+  EXPECT_EQ(1, p1->nodes());
+  
+  auto sceneCur = scene();
+  sceneCur.addBody(p1);
+  sceneCur.addBody(p2);
 }
 
 int main(int argc, char* argv[]) {
