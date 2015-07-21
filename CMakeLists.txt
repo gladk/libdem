@@ -8,6 +8,8 @@ SET(SOVERSION 0)
 SET(USERPATH 1)
 SET(REALNUMBER double)
 
+SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")
+
 INCLUDE(GNUInstallDirs)
 #===========================================================
 IF(NOT(CMAKE_CXX_FLAGS))
@@ -17,8 +19,10 @@ IF(NOT(CMAKE_CXX_FLAGS))
 ENDIF (NOT(CMAKE_CXX_FLAGS))
 
 #C+11 support
-set(CMAKE_CXX_FLAGS "-std=c++0x -pthread ${CMAKE_CXX_FLAGS}")
+SET(CMAKE_CXX_FLAGS "-std=c++0x -pthread ${CMAKE_CXX_FLAGS}")
 #===========================================================
+
+FIND_PACKAGE(GTest REQUIRED)
 
 SET(BOOST_MIN_VERSION "1.54.0")
 FIND_PACKAGE(Boost COMPONENTS unit_test_framework REQUIRED)
@@ -30,9 +34,10 @@ FIND_PACKAGE(Eigen3 REQUIRED)
 INCLUDE_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
 
 #===========================================================
+INCLUDE_DIRECTORIES(${GTEST_INCLUDE_DIR})
+#===========================================================
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/lib)
 ADD_SUBDIRECTORY("${CMAKE_SOURCE_DIR}/lib")
 #===========================================================
 ADD_SUBDIRECTORY("${CMAKE_SOURCE_DIR}/test")
-#===========================================================
 
