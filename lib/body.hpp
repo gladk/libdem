@@ -26,13 +26,16 @@ class body {
   friend class sphere;
   private:
     std::deque<shared_ptr<node>> _nodes;
+    shapeType ShType = shapeType::SPHERE;
+    v3 _color = v3::Zero();
+    real _rad = 0.;
   public:
     body() {};
     const std::size_t nodes() const {return _nodes.size();}
+    const real rad() const { return _rad;}
 };
 
 class sphere : public body {
   public:
     sphere(real rad, v3 pos, shared_ptr<material> mat);
-    const real rad() const;
 };

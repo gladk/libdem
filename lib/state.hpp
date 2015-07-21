@@ -23,10 +23,10 @@
 #include "base.hpp"
 
 class state {
-  private:
+  public:
     v3 _pos = v3::Zero();
     quat _ori = quat::Identity();
-  public:
+    
     state() {};
     state(v3 pos) : _pos(pos) {};
     const v3 pos() const { return _pos; };

@@ -22,10 +22,6 @@
 #include "body.hpp"
 
 sphere::sphere (real rad, v3 pos, shared_ptr<material> mat) {
-  _nodes.push_back(make_shared<node>(shape(rad), state(pos), mat));
+  _nodes.push_back(make_shared<node>(state(pos), mat));
+  _rad = rad;
 }
-
-const real sphere::rad() const {
-  return _nodes[0]->_shape.rad();
-}
-
