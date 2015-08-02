@@ -40,9 +40,12 @@ TEST(BasicParticleCreation, Trivial) {
   EXPECT_EQ(1, p1->nodes());
   
   auto sceneCur = scene();
-  sceneCur.addBody(p1);
-  sceneCur.addBody(p2);
+  const auto p1_id = sceneCur.addBody(p1);
+  EXPECT_EQ(1, p1_id);
+  const auto p2_id = sceneCur.addBody(p2);
+  EXPECT_EQ(2, p2_id);
   EXPECT_EQ(2, sceneCur.len());
+  
 }
 
 int main(int argc, char* argv[]) {

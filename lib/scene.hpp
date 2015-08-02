@@ -28,6 +28,6 @@ class scene {
     std::deque<shared_ptr<body>> _bodies;
   public:
     scene() {};
-    void addBody(shared_ptr<body> p);
+    std::size_t addBody(shared_ptr<body> p);
     const std::size_t len() const;
 };
