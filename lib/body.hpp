@@ -29,10 +29,14 @@ class body {
     shapeType ShType = shapeType::SPHERE;
     v3 _color = v3::Zero();
     real _rad = -1.;
+    bool _active = true;
   public:
     body() {};
     const std::size_t nodes() const {return _nodes.size();}
     const real rad() const { return _rad;}
+    const bool active() const { return _active; } 
+    void enable() { _active=true; } 
+    void disable() { _active=false; } 
 };
 
 class sphere : public body {
