@@ -38,6 +38,9 @@ TEST(BasicParticleCreation, Trivial) {
   auto sceneCur = scene();
   sceneCur.addBody(p1);
   sceneCur.addBody(p2);
+  
+  EXPECT_EQ(2, sceneCur.len());
+  
 }
 
 int main(int argc, char* argv[]) {

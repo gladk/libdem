@@ -21,10 +21,11 @@
 
 #include "scene.hpp"
 
-scene::scene() {
-
-}
-
 void scene::addBody(shared_ptr<body> b) {
   _bodies.push_back(b);
 }
+
+const std::size_t scene::len() const{
+  return _bodies.size();
+}
+
