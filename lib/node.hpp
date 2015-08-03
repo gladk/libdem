@@ -29,5 +29,5 @@ class node {
     shared_ptr<material> _mat;
 
     node(state stateT, shared_ptr<material> matT) :
-      _state(stateT), _mat(matT){};
+      _state(stateT), _mat(matT) {};
 };

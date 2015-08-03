@@ -19,39 +19,12 @@
   along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "body.hpp"
+#include "material.hpp"
 
-body::body () {}
-
-const std::size_t body::nodes() const {
-  return _nodes.size();
+const real material::rho() const {
+  return _rho;
 }
 
-const real body::rad() const {
-  return _rad;
-}
-
-const bool body::active() const {
-  return _active;
-}
-
-void body::enable() {
-  _active=true;
-}
-
-void body::disable() {
-  _active=false;
-}
-
-const std::size_t body::id() const {
-  return _id;
-}
-
-void body::id(std::size_t id) {
-  _id = id;
-}
-
-sphere::sphere (real rad, v3 pos, shared_ptr<material> mat) {
-  _nodes.push_back(make_shared<node>(state(pos), mat));
-  _rad = rad;
+const real material::frict() const {
+  return _frict;
 }

@@ -1,6 +1,9 @@
 SET(SRC_FILES 
       body.cpp
+      contact.cpp
+      material.cpp
       scene.cpp
+      state.cpp
 )
 SET(HEADERS_FILES 
       ${CMAKE_BINARY_DIR}/lib/base.hpp

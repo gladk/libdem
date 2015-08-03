@@ -32,14 +32,14 @@ class body {
     bool _active = true;
     std::size_t _id = 0;
   public:
-    body() {};
-    const std::size_t nodes() const {return _nodes.size();}
-    const real rad() const { return _rad;}
-    const bool active() const { return _active; }
-    void enable() { _active=true; }
-    void disable() { _active=false; }
-    const std::size_t id() const { return _id; }
-    void id(std::size_t id) { _id = id; }
+    body();
+    const std::size_t nodes() const;
+    const real rad() const;
+    const bool active() const;
+    void enable();
+    void disable();
+    const std::size_t id() const;
+    void id(std::size_t id);
 };
 
 class sphere : public body {

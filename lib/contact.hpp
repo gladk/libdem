@@ -33,11 +33,11 @@ class contact {
     real _cn = 0.;
     real _ct = 0.;
   public:
-    contact(shared_ptr<node> node_i, shared_ptr<node>, node_j) : 
+    contact(shared_ptr<node> node_i, shared_ptr<node> node_j) :
       _node_i(node_i), _node_j(node_j){};
     
-    const real kn() const {return _kn;}
-    const real kt() const {return _kt;}
-    const real cn() const {return _cn;}
-    const real ct() const {return _ct;}
+    const real kn() const;
+    const real kt() const;
+    const real cn() const;
+    const real ct() const;
 };

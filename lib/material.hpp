@@ -29,6 +29,6 @@ class material {
   public:
     material() {};
     material(real rho, real frict) : _rho(rho), _frict(frict) {};
-    const real rho() const {return _rho;}
-    const real frict() const {return _frict;}
+    const real rho() const;
+    const real frict() const;
 };

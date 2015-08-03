@@ -19,39 +19,20 @@
   along with libdem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "body.hpp"
+#include "contact.hpp"
 
-body::body () {}
-
-const std::size_t body::nodes() const {
-  return _nodes.size();
+const real contact::kn() const {
+  return _kn;
 }
 
-const real body::rad() const {
-  return _rad;
+const real contact::kt() const {
+  return _kt;
 }
 
-const bool body::active() const {
-  return _active;
+const real contact::cn() const {
+  return _cn;
 }
 
-void body::enable() {
-  _active=true;
-}
-
-void body::disable() {
-  _active=false;
-}
-
-const std::size_t body::id() const {
-  return _id;
-}
-
-void body::id(std::size_t id) {
-  _id = id;
-}
-
-sphere::sphere (real rad, v3 pos, shared_ptr<material> mat) {
-  _nodes.push_back(make_shared<node>(state(pos), mat));
-  _rad = rad;
+const real contact::ct() const {
+  return _ct;
 }

@@ -29,6 +29,6 @@ class state {
     
     state() {};
     state(v3 pos) : _pos(pos) {};
-    const v3 pos() const { return _pos; };
-    const quat ori() const { return _ori; };
+    const v3 pos() const;
+    const quat ori() const;
 };
